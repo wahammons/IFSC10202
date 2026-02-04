@@ -13,13 +13,21 @@ m = 60
 h = 60* 60
 d = 24 * 60 * 60
 y = 365 * 24 * 60 * 60
+
 year = total // y
-left = total % y
-day = left // d
+total = total - (y * year)
 
-hour = left // h
+day = total // d
+total = total-(d * day)
 
-minute = left // m
+hour = total // h
+total = total - (h * hour)
+
+minute = total // m
+total = total - (m * minute)
+
+sec = total
+
 print(f"Years: {year}")
 print(f"Days: {day}")
 print(f"Hours: {hour}")
