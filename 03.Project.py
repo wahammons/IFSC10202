@@ -15,5 +15,4 @@ elif op == "*":
 elif op == "/":
     print(num1, "/", num2,"=", div, num1, num2)
 
-total = 
-print(num1, op, num2 "=" )
+
