@@ -14,6 +14,7 @@ elif op == "*":
     print(num1, "*", num2,"=", mult)
 elif op == "/":
     #move div here and check before if num2 is zero
+    
     print(num1, "/", num2,"=", div,)
 else:
     print("Invalid Operator")
