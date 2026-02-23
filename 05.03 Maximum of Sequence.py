@@ -1,6 +1,6 @@
 value = input("Enter a Number (CR to quit): ")
 if value != "":
-  maximum =int(value)
+  maximum = int(value)
   while value != "":
     if int(value) > maximum:
         maximum = int(value)
