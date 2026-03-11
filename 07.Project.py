@@ -1,11 +1,11 @@
 def ParseDegreeString(ddmmss):
-    deg_pos = ddmmss.find(chr(176))   # Degree symbol °
-    min_pos = ddmmss.find("'")        # Minute symbol '
-    sec_pos = ddmmss.find('"')        # Second symbol "
+    degree_pos = ddmmss.find(chr(176))   # Degree symbol °
+    minute_pos = ddmmss.find("'")        # Minute symbol '
+    second_pos = ddmmss.find('"')        # Second symbol "
 
-    degrees = float(ddmmss[:deg_pos])
-    minutes = float(ddmmss[deg_pos + 1:min_pos])
-    seconds = float(ddmmss[min_pos + 1:sec_pos])
+    degrees = float(ddmmss[:degree_pos])
+    minutes = float(ddmmss[degree_pos + 1:minute_pos])
+    seconds = float(ddmmss[minute_pos + 1:second_pos])
 
     return degrees, minutes, seconds
 
@@ -15,11 +15,11 @@ def DDMMSStoDecimal(degrees, minutes, seconds):
 
 
 def main():
-    input_file = "07.Project Angles Input.txt"
-    output_file = "07.Project Angles Output.txt"
+    inputfile = "07.Project Angles Input.txt"
+    outputfile = "07.Project Angles Output.txt"
 
-    infile = open(input_file, "r")
-    outfile = open(output_file, "w")
+    infile = open(inputfile, "r")
+    outfile = open(outputfile, "w")
 
     for line in infile:
         line = line.strip()
