@@ -3,6 +3,8 @@ def ParseDegreeString(ddmmss):
     minute_pos = ddmmss.find("'")        # Minute symbol '
     second_pos = ddmmss.find('"')        # Second symbol "
 
+    
+
     degrees = float(ddmmss[:degree_pos])
     minutes = float(ddmmss[degree_pos + 1:minute_pos])
     seconds = float(ddmmss[minute_pos + 1:second_pos])
