@@ -1,4 +1,4 @@
-def load_constitution(filename):
+def load_cons(filename):
     with open(filename, "r") as file:
         return [line.rstrip("\n") for line in file] #removes linefeed
 
@@ -11,7 +11,7 @@ def find_section(lines, index):
         end += 1
     return start, end
 
-def search_constitution(lines, term):
+def search_cons(lines, term):
     i = 0
     found = False
     while i < len(lines):
@@ -34,13 +34,13 @@ def search_constitution(lines, term):
 
 
 def main():
-    lines = load_constitution("constitution.txt")
+    lines = load_cons("constitution.txt")
     while True:
         term = input("Enter search term: ").strip()
         if term == "":
             break
 
-        search_constitution(lines, term)
+        search_cons(lines, term)
 
 if __name__ == "__main__":
     main()
