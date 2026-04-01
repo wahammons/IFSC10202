@@ -7,33 +7,27 @@ with open(file_name, "r") as file:
         row = line.strip().split(",")
         distance_table.append(row)
 
-# Print the 2D list (formatted like the example)
 for row in distance_table:
     for item in row:
         print(f"{item:>10}", end="")
     print()
 
-# Prompt user input
 from_city = input("Enter From City: ")
 to_city = input("Enter To City: ")
 
-# Initialize indexes
 from_index = -1
 to_index = -1
 
-# Search zeroth column (first column) for From City
 for i in range(1, len(distance_table)):
     if distance_table[i][0].strip().lower() == from_city.strip().lower():
         from_index = i
         break
 
-# Search zeroth row (first row) for To City
 for j in range(1, len(distance_table[0])):
     if distance_table[0][j].strip().lower() == to_city.strip().lower():
         to_index = j
         break
 
-# Validate inputs
 if from_index == -1:
     print("Invalid From City")
 elif to_index == -1:
