@@ -13,7 +13,7 @@ class Student:
         return sum(valid_scores) / len(valid_scores)
 
     def TotalAverage(self):
-        # Treat empty strings as 0
+
         total_scores = [float(s) if s.strip() else 0.0 for s in self.Grades]
         if not total_scores:
             return 0.0
@@ -28,7 +28,7 @@ class Student:
         else: return "F"
 
 def main():
-    # Print Header
+   
     header = f"{'First':<12} {'Last':<12} {'ID':<12} {'Running':<12} {'Semester':<12} {'Letter':<12}"
     sub_header = f"{'Name':<12} {'Name':<12} {'Number':<12} {'Average':<12} {'Average':<12} {'Grade':<12}"
     print(header)
@@ -44,7 +44,7 @@ def main():
                 # Split line by comma
                 parts = line.strip().split(',')
                 
-                # Assign parts based on logic: first 3 are fixed, rest are scores
+
                 fname = parts[0]
                 lname = parts[1]
                 tnum = parts[2]
@@ -53,7 +53,7 @@ def main():
                 # Create Student object
                 student = Student(fname, lname, tnum, scores)
                 
-                # Display output formatted to match example
+                # Display output in formatted manner
                 print(f"{student.FirstName:<12} {student.LastName:<12} {student.TNumber:<12} "
                       f"{student.RunningAverage():<12.2f} {student.TotalAverage():<12.2f} "
                       f"{student.LetterGrade():<12}")
